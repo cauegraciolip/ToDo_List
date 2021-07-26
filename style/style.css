@@ -27,10 +27,10 @@
 
     --very-dark-blue: rgb(22, 23, 34);
     --very-dark-blue-d: rgb(37, 39, 60);
-    --light-blue: rgb(202, 205, 232);
+    --light-blue-dm: rgb(202, 205, 232);
     --light-blue-hover: rgb(228, 229, 241);
-    --dark-blue: rgb(119, 122, 146);
-    --very-dark-blue: rgb(77, 80, 102);
+    --dark-blue-dm: rgb(119, 122, 146);
+    --very-dark-blue-dm: rgb(77, 80, 102);
     --very-dark-blue-2: rgb(57, 58, 76);
 }
 
@@ -66,3 +66,138 @@ body {
     position: relative;
     justify-content: space-between;
 }
+
+
+#lista_tarefas {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    background-color: var(--light-gray);
+}
+
+#input_area {
+    display: flex;
+    position: absolute;
+    width: inherit;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#tarefas {
+    width: 100%;
+    position: absolute;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.3rem;
+    outline: none;
+    color: var(--very-dark-blue);
+    font-size: 0.85rem;
+    box-shadow: 8px 8px 15px -3px var(--very-dark-blue);
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+button .check {
+    position: relative;
+    cursor: pointer;
+    color: var(--light-blue);
+    margin-left: 17.45rem;
+    transition: all 0.3s ease;
+}
+
+.check:hover {
+    color: var(--bright-blue);
+    transition: all 0.3s ease;
+}
+
+#container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 6.2rem;
+}
+
+#ul {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    padding: 0.7rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 8px 8px 15px -3px var(--light-blue);
+    list-style-type: none;
+    
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 0.5rem;
+    color: var(--very-dark-blue-dm);
+    font-size: 0.9rem;
+}
+
+.empty {
+    color: var(--light-blue);
+    text-align: center;
+    padding-right: 0.3rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+@keyframes clear_item {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.empty:hover {
+    animation: clear_item 0.2s linear ;
+    transition: all 1s ease;
+    color: red;
+}
+
+.btn_lista {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#footer_lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    color: var(--dark-blue-dm);
+}
+
+#footer_p {
+    font-size: 0.8rem;
+}
+
+#clear {
+    border: none;
+    background: none;
+    color: var(--dark-blue-dm);
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+#clear:hover {
+    cursor: pointer;
+    color: var(--bright-blue);
+    transition: all 0.3s ease;
+}
+
+
