@@ -37,8 +37,13 @@
 body {
     display: block;
     height: auto;
-    width: 100%;
+    max-width: 1440px;
     background-color: var(--light-gray);
+}
+
+#header_top {
+    display: block;
+    width: 100%;
 }
 
 #picture img {
@@ -46,8 +51,12 @@ body {
     position: absolute;
 }
 
+#header {
+    width: 90%;
+    margin: 0 auto;
+}
+
 #title {
-    padding-left: 2rem;
     padding-top: 2rem;
     letter-spacing: 10px;
     font-size: 1.7rem;
@@ -55,7 +64,6 @@ body {
 }
 
 #mode {
-    padding-right: 2rem;
     padding-top: 1.4rem;
 }
 
@@ -67,29 +75,23 @@ body {
     justify-content: space-between;
 }
 
-
 #lista_tarefas {
-    display: flex;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
+    width: 100%;
     background-color: var(--light-gray);
 }
 
 #input_area {
     display: flex;
-    position: absolute;
-    width: inherit;
     margin: 0 auto;
-    margin-top: 50px;
-    justify-content: center;
+    margin-top: 3.5rem;
     align-items: center;
 }
 
 #tarefas {
-    width: 100%;
+    width: 90%;
     position: absolute;
     padding: 0.7rem;
+    padding-left: 2rem;
     border: none;
     border-radius: 0.3rem;
     outline: none;
@@ -105,9 +107,9 @@ button {
 
 button .check {
     position: relative;
+    margin-left: 0.7rem;
     cursor: pointer;
     color: var(--light-blue);
-    margin-left: 17.45rem;
     transition: all 0.3s ease;
 }
 
@@ -116,18 +118,44 @@ button .check {
     transition: all 0.3s ease;
 }
 
+@media all and (min-width: 700px) {
+    #header {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #tarefas {
+        width: 50%;
+    }
+
+}
+
+@media all and (min-width: 550px){
+    #input_area {
+        margin-top: 40px;
+    }
+
+    #tarefas {
+        padding: 0.9rem;
+        padding-left: 2.5rem;
+    }
+
+    .check {
+        font-size: 1.1rem;
+    }
+}
+
 #container {
     display: block;
     position: absolute;
     width: 100%;
-    margin-top: 6.2rem;
+    margin-top: 1.5rem;
 }
 
 #ul {
     display: block;
     margin: 0 auto;
     width: 90%;
-    padding: 0.7rem;
     background-color: white;
     border-radius: 0.3rem;
     box-shadow: 8px 8px 15px -3px var(--light-blue);
@@ -140,7 +168,7 @@ button .check {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--light-gray);
-    padding: 0.5rem;
+    padding: 1rem;
     color: var(--very-dark-blue-dm);
     font-size: 0.9rem;
 }
@@ -151,6 +179,13 @@ button .check {
     padding-right: 0.3rem;
     font-size: 1.1rem;
     transition: all 0.3s ease;
+}
+
+@media all and (min-width: 700px) {
+    #ul {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 @keyframes clear_item {
@@ -178,7 +213,7 @@ button .check {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.7rem;
+    padding: 1rem;
     color: var(--dark-blue-dm);
 }
 
@@ -200,4 +235,37 @@ button .check {
     transition: all 0.3s ease;
 }
 
+#ft_itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 8px 8px 15px -3px var(--light-blue);
+}
 
+#ft_itens input {
+    border: none;
+    background: none;
+    color: var(--dark-blue-dm);
+    padding: 0.4rem;
+    margin: 0.4rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#ft_itens input:hover {
+    transition: all 0.3s ease;
+    color: var(--bright-blue);
+}
+
+@media all and (min-width: 700px) {
+    #ft_itens {
+        width: 50%;
+    }
+}

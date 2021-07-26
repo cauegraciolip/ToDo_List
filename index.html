@@ -14,18 +14,19 @@
 
 </head>
 <body>
-  <header>
+  <header id="header_top">
+
+    <picture id="picture">
+
+      <source media="(min-width: 450px)" srcset="images/bg-desktop-light.jpg">
+
+      <img src="images/bg-mobile-light.jpg" alt="ligth-mode">
+      
+
+    </picture>
 
     <div id="header">
-      <picture id="picture">
-
-        <source media="(min-width: 450px)" srcset="images/bg-desktop-light.jpg">
-
-        <img src="images/bg-mobile-light.jpg" alt="ligth-mode">
-        
-
-      </picture>
-
+      
       <div id="title_mode">
 
         <h1 id="title">TODO</h1>
@@ -61,11 +62,19 @@
           <i class="fas fa-times empty"></i>
         </button>
       </li>
+      
+
       <li id="footer_lista">
         <p id="footer_p">1 items left</p>
         <input type="button" value="Clear list" id="clear">
       </li>
     </ul>
+
+    <footer id="ft_itens">
+      <input type="button" value="All">
+      <input type="button" value="Active">
+      <input type="button" value="Completed">
+    </footer>
 
   </main>
 
