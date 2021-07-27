@@ -87,7 +87,7 @@ body {
     align-items: center;
 }
 
-#tarefas {
+#tasks {
     width: 90%;
     position: absolute;
     padding: 0.7rem;
@@ -118,13 +118,24 @@ button .check {
     transition: all 0.3s ease;
 }
 
+@media all and (min-width: 1000px) {
+    #title {
+        font-size: 2.1rem;
+    }
+
+    #mode {
+        width: 2rem;
+    }
+
+}
+
 @media all and (min-width: 700px) {
     #header {
         width: 50%;
         margin: 0 auto;
     }
 
-    #tarefas {
+    #tasks {
         width: 50%;
     }
 
@@ -135,7 +146,7 @@ button .check {
         margin-top: 40px;
     }
 
-    #tarefas {
+    #tasks {
         padding: 0.9rem;
         padding-left: 2.5rem;
     }
@@ -153,17 +164,19 @@ button .check {
 }
 
 #ul {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
     margin: 0 auto;
     width: 90%;
     background-color: white;
-    border-radius: 0.3rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     box-shadow: 8px 8px 15px -3px var(--light-blue);
     list-style-type: none;
     
 }
 
-.tasks {
+.li_tarefas {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,8 +194,22 @@ button .check {
     transition: all 0.3s ease;
 }
 
+#lista {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: 8px 8px 15px -3px var(--light-blue);
+}
+
 @media all and (min-width: 700px) {
     #ul {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #lista {
         width: 50%;
         margin: 0 auto;
     }
@@ -208,6 +235,8 @@ button .check {
     background: none;
     cursor: pointer;
 }
+
+
 
 #footer_lista {
     display: flex;

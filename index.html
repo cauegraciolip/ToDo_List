@@ -34,15 +34,14 @@
 
       </div>
 
-      <form id="lista_tarefas">
+      <form action="" id="lista_tarefas">
 
         <div id="input_area">
 
-          <input type="text" name="tarefas" id="tarefas" placeholder=" Create a new todo...">
+          <input type="text" name="tasks" id="tasks" placeholder=" Create a new todo..." >
 
-          <button type="submit" id="inserir">
+          <button onclick="insert()" type="submit" id="inserir"> 
             <i class="fas fa-check-circle check"></i>
-
           </button>
 
         </div>
@@ -55,18 +54,12 @@
 
   <main id="container">
 
-    <ul id="ul">
-      <li class="tasks">
-        <p>Tarefas</p> 
-        <button class="btn_lista">
-          <i class="fas fa-times empty"></i>
-        </button>
-      </li>
-      
+    <ul id="ul"></ul>
 
+    <ul id="lista">
       <li id="footer_lista">
-        <p id="footer_p">1 items left</p>
-        <input type="button" value="Clear list" id="clear">
+        <p id="footer_p"></p>
+        <input onclick="deleteList()" type="button" value="Clear list" id="clear">
       </li>
     </ul>
 
@@ -77,6 +70,6 @@
     </footer>
 
   </main>
-
+  <script src="app/script.js"></script>
 </body>
 </html>
