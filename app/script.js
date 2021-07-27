@@ -9,11 +9,7 @@ onload = function() {
 
         tarefas.forEach(element => {
             content += `<li class="li_tarefas">
-            <p>${element}</p> 
-            <button onclick="deleteItem" class="btn_lista">
-                <i class="fas fa-times empty"></i>
-            </button>
-            </li>`
+            <p>${element}</p></li>`
         }); 
         ul.innerHTML = content
     }
