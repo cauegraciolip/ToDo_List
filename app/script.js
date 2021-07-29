@@ -9,7 +9,7 @@ onload = function() {
 
         tarefas.forEach(element => {
             content += `<li class="li_tarefas">
-            <p>${element}</p></li>`
+            <p>${element}</p><i class="fas fa-times empty"></i></li>`
         }); 
         ul.innerHTML = content
     }
