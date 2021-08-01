@@ -83,14 +83,14 @@ body {
 #input_area {
     display: flex;
     margin: 0 auto;
-    margin-top: 3.5rem;
+    margin-top: 2.3rem;
     align-items: center;
 }
 
 #tasks {
     width: 90%;
     position: absolute;
-    padding: 0.7rem;
+    padding: 0.9rem;
     padding-left: 2rem;
     border: none;
     border-radius: 0.3rem;
@@ -176,6 +176,59 @@ button .check {
     
 }
 
+#conc {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    width: 90%;
+    background-color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 8px 8px 15px -3px var(--light-blue);
+    list-style-type: none;
+}
+
+#conc p {
+    text-decoration: line-through;
+}
+
+#conc .done{
+    width: 1.15rem;
+    height: 1.15rem;
+    color: gray;
+    background-color: #0093E9;
+    background-color: #57ddff;
+    background-image: linear-gradient(225deg, #57ddff 0%, #bf58f3 79%);
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+#ul .done {
+    width: 1.15rem;
+    height: 1.15rem;
+    cursor: pointer;
+    border: 2px solid rgba(161, 161, 161, 0.603);
+    border-radius: 100%;
+}
+
+#ul .done:hover {
+    width: 1.15rem;
+    height: 1.15rem;
+    color: gray;
+    background-color: #0093E9;
+    background-color: #57ddff;
+    background-image: linear-gradient(225deg, #57ddff 0%, #bf58f3 79%);
+    cursor: pointer;
+    border-radius: 100%;
+    border: none;
+}
+
+.done i {
+    font-size: 0.57rem;
+    color: white;
+}
+
 .li_tarefas {
     display: flex;
     justify-content: space-between;
@@ -184,6 +237,25 @@ button .check {
     padding: 1rem;
     color: var(--very-dark-blue-dm);
     font-size: 0.9rem;
+}
+
+.li_tarefas_concluidas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 1rem;
+    color: var(--very-dark-blue-dm);
+    font-size: 0.9rem;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+}
+
+.texto {
+    padding-left: 1rem;
 }
 
 .empty {
@@ -205,6 +277,11 @@ button .check {
 
 @media all and (min-width: 700px) {
     #ul {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #conc {
         width: 50%;
         margin: 0 auto;
     }
@@ -250,15 +327,20 @@ button .check {
     font-size: 0.8rem;
 }
 
-#clear {
+#clear_list {
+    display: flex;
+}
+
+.clear {
     border: none;
     background: none;
     color: var(--dark-blue-dm);
     font-size: 0.8rem;
     transition: all 0.3s ease;
+    margin-left: 1.5rem;
 }
 
-#clear:hover {
+.clear:hover {
     cursor: pointer;
     color: var(--bright-blue);
     transition: all 0.3s ease;
