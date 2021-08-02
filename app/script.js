@@ -99,7 +99,8 @@ function deleteItem(id) {
     location.reload()
 }
 
-function deleteItemComplete(id) {
+
+function deleteItemCompleted(id) {
 
     let nova_lista_sem_click = []
 
