@@ -210,4 +210,70 @@ content = `${qtdItens} itens left`
 
 qtd.innerHTML = content
 
+function activeAll() {
+
+    let allContainer = document.getElementById('conc')
+    let allUl = document.getElementById('ul')
+    allContainer.style.display = "block"
+    allUl.style.display = "block"
+
+    let sizeAll = document.getElementById('all')
+    sizeAll.style.color = "rgb(58, 123, 253)"
+    sizeAll.style.fontSize = "1rem"
+
+    let sizeColorActive = document.getElementById('active')
+    sizeColorActive.style.color = "rgb(119, 122, 146)"
+    sizeColorActive.style.fontSize = "0.9rem"
+
+    let sizeColorCompleted = document.getElementById('completed')
+    sizeColorCompleted.style.color = "rgb(119, 122, 146)"
+    sizeColorCompleted.style.fontSize = "0.9rem"
+
+ 
+}
+
+function active() {
+
+    let allContainer = document.getElementById('conc')
+    allContainer.style.display = "none"
+
+    let allUl = document.getElementById('ul')
+    allUl.style.display = "block"
+
+    let sizeAll = document.getElementById('all')
+    sizeAll.style.color = "rgb(119, 122, 146)"
+    sizeAll.style.fontSize = "0.9rem"
+
+    let sizeColorActive = document.getElementById('active')
+    sizeColorActive.style.color = "rgb(58, 123, 253)"
+    sizeColorActive.style.fontSize = "1rem"
+
+    let sizeColorCompleted = document.getElementById('completed')
+    sizeColorCompleted.style.color = "rgb(119, 122, 146)"
+    sizeColorCompleted.style.fontSize = "0.9rem"
+
+}
+
+function isCompleted() {
+
+    let allUl = document.getElementById('ul')
+    allUl.style.display = "none"
+
+    let allContainer = document.getElementById('conc')
+    allContainer.style.display = "block"
+
+    let sizeAll = document.getElementById('all')
+    sizeAll.style.color = "rgb(119, 122, 146)"
+    sizeAll.style.fontSize = "0.9rem"
+
+    let sizeColorActive = document.getElementById('active')
+    sizeColorActive.style.color = "rgb(119, 122, 146)"
+    sizeColorActive.style.fontSize = "0.9rem"
+
+    let sizeColorCompleted = document.getElementById('completed')
+    sizeColorCompleted.style.color = "rgb(58, 123, 253)"
+    sizeColorCompleted.style.fontSize = "1rem"
+    
+}
+
 

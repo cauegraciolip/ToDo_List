@@ -20,7 +20,7 @@
 
       <source media="(min-width: 450px)" srcset="images/bg-desktop-light.jpg">
 
-      <img src="images/bg-mobile-light.jpg" alt="ligth-mode">
+      <img src="images/bg-mobile-light.jpg" alt="ligth-mode" id="light-image">
 
     </picture>
 
@@ -29,7 +29,6 @@
       <div id="title_mode">
 
         <h1 id="title">TODO</h1>
-        <img src="images/icon-moon.svg" alt="" id="mode">
 
       </div>
 
@@ -68,9 +67,9 @@
     </ul>
 
     <footer id="ft_itens">
-      <input type="button" value="All">
-      <input type="button" value="Active">
-      <input type="button" value="Completed">
+      <input id="all" type="button" value="All" onclick="activeAll(this)">
+      <input id="active" type="button" value="Active" onclick="active(this)">
+      <input id="completed" type="button" value="Completed" onclick="isCompleted(this)">
     </footer>
 
   </main>

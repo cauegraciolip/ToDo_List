@@ -65,6 +65,7 @@ body {
 
 #mode {
     padding-top: 1.4rem;
+    cursor: pointer;
 }
 
 #title_mode {
