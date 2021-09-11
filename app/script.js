@@ -2,6 +2,42 @@ var tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
 var concluidas = JSON.parse(localStorage.getItem('concluidas')) || [];
 
+const html = document.querySelector("html")
+const checkbox = document.querySelector("input[name=theme]")
+
+const getStyles = (element, style) => 
+    window
+        .getComputedStyle(element)
+        .getPropertyValue(style)
+
+const initialColors = {
+    bg: getStyles(html, "--bg"),
+    textColor: getStyles(html, "--text-color"),
+    darkBlue: getStyles(html, "--dark-blue"),
+    lightBlue: getStyles(html, "--light-blue")
+}
+
+const darkMode = {
+    bg: "#333333",
+    textColor: "#f9f9f9",
+    darkBlue: "#3664ff",
+    lightBlue: "#161722"
+}
+
+const transformKey = (key) => 
+    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+const changeColors = (colors) =>
+    Object.keys(colors).map(key => 
+            html.style.setProperty(transformKey(key), colors[key])
+        )
+
+checkbox.addEventListener ('change', ({target}) => {
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+})
+    
+
+
 onload = function() {
 
     let completed = document.getElementById('conc')
